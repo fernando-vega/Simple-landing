@@ -1,0 +1,9 @@
+.btn{
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  &.btn-blue{
+    color: $color-white;
+    background: $color-blue;
+  }
+}
