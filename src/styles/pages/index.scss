@@ -5,13 +5,13 @@
   width: 100vw;
   padding-bottom: 30px;
   @include responsive(phablet) {
-    height: 60vh;
+    height: 80vh;
   }
   .content-banner {
     height: 100vh;
     margin: 0;
     @include responsive(phablet) {
-      height: 60vh;
+      height: 80vh;
     }
   }
   .description-banner {
@@ -43,7 +43,7 @@
     width: 100%;
     margin: 0;
     @include responsive(phablet) {
-      height: 60vh;
+      height: 80vh;
     }
     form {
       padding: 15px 10%;
@@ -61,8 +61,8 @@
         margin: 5px 0;
         outline: none;
         border: 2px $color-black solid;
-        transition: .5s;
-        &:focus{
+        transition: 0.5s;
+        &:focus {
           border: 2px $color-blue solid;
         }
       }
@@ -76,7 +76,7 @@
   }
 }
 .section {
-  padding: 50px 0;
+  padding: 100px 0;
   .title-section {
     font-size: 2.5em;
     text-align: center;
@@ -84,6 +84,15 @@
   }
   .description-section {
     text-align: justify;
+    max-width: 600px;
+  }
+  &.dark-section {
+    background: $color-black;
+    color: #fff;
+    text-align: center;
+  }
+  &.gray-section {
+    background-color: #f5f5f5;
   }
   @include responsive(phablet) {
     .title-section {
@@ -100,7 +109,7 @@
   background: $color-blue;
   padding: 35px;
   margin: 30px 15px;
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   .icon {
     padding: 5px 15px;
     i {
@@ -119,12 +128,12 @@
     display: flex;
     align-items: center;
   }
-  &:hover{
+  &:hover {
     background-color: rgba($color-blue, 0.9);
     transform: scale(1.02);
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
-  @include responsive(phablet){
+  @include responsive(phablet) {
     min-height: 250px !important;
   }
 }
@@ -135,7 +144,7 @@
   height: 500px;
   position: relative;
   z-index: 0;
-	animation: 300s para infinite linear;
+  animation: 300s para infinite linear;
   &::after {
     content: "";
     background-color: rgba($color-black, 0.4);
@@ -164,10 +173,50 @@
   }
 }
 
-
 @keyframes para {
-	100% {
-		background-position: 
-			-10000px 0,
-		}
-	}
+  100% {
+    background-position: -10000px 0;
+  }
+}
+
+.content-team {
+  margin-top: 30px;
+  .content-image {
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    &.tutor-1 {
+      background: url(../images/tutor-1.jpg);
+    }
+    &.tutor-2 {
+      background: url(../images/tutor-2.jpg);
+    }
+    &:hover {
+      transform: scale(1.08);
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25),
+        0px 3px 5px rgba(0, 0, 0, 0.22);
+    }
+  }
+  .content-description {
+    padding: $padding * 2;
+    h3 {
+      color: $color-black-titles;
+      font-weight: bold;
+      font-size: 1.2em;
+      line-height: 1.5em;
+    }
+    span {
+      color: $color-black-titles;
+      font-weight: bold;
+      font-size: 0.8em;
+    }
+    p {
+      color: #6a6a6a;
+      font-size: 1em;
+      margin-top: $padding * 2;
+      padding: 0 $padding * 2;
+    }
+  }
+}
