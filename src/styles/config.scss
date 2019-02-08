@@ -1,7 +1,6 @@
+$images: "../../assets/images";
 
-$images: '../../assets/images';
-
-@import 'config/colors';
-@import 'config/fonts';
-@import 'config/variables';
-@import 'config/base.scss';
+@import "config/variables";
+@import "config/colors";
+@import "config/fonts";
+@import "config/base.scss";
