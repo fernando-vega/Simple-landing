@@ -1,9 +1,14 @@
-.btn{
+.btn {
   border: none;
   cursor: pointer;
   padding: 10px;
-  &.btn-blue{
+  &.btn-blue {
     color: $color-white;
     background: $color-blue;
+    transition: 0.3s;
+    &:hover {
+      background-color: rgba($color-blue, 0.8);
+      transform: scale(1.05);
+    }
   }
 }

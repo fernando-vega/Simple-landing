@@ -21,10 +21,11 @@
       padding: 12px;
       margin: 5px 0;
       outline: none;
-      border: 2px $color-black solid;
+      border: 3px $color-black-titles solid;
       transition: 0.5s;
       &:focus {
-        border: 2px $color-blue solid;
+        border: 3px $color-blue solid;
+        border-radius: 8px;
       }
     }
     .content-btn {
