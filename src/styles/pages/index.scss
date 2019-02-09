@@ -189,10 +189,10 @@
     width: 150px;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     &.tutor-1 {
-      background: url(../images/tutor-1.jpg);
+      background: url(../images/tutor-1.jpg) center no-repeat;
     }
     &.tutor-2 {
-      background: url(../images/tutor-2.jpg);
+      background: url(../images/tutor-2.png) center no-repeat;
     }
     &:hover {
       transform: scale(1.08);
