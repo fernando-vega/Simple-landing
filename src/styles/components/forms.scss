@@ -36,3 +36,28 @@
     }
   }
 }
+
+.form-red-section {
+  padding: $padding;
+  form {
+    padding: $padding;
+    margin: 0;
+    input {
+      width: 100%;
+      border: none;
+      padding: 10px;
+      outline: none;
+      border: 3px $color-red solid;
+      transition: 0.5s;
+      &:focus {
+        border: 3px $color-white solid;
+      }
+    }
+    .content-btn {
+      margin: 15px 0 5px 0;
+    }
+    @include responsive(phablet) {
+      padding: 0 10%;
+    }
+  }
+}

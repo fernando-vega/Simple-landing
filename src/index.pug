@@ -14,8 +14,10 @@ block content
         .col-xs-12.col-sm-4(data-aos="fade-left")
           .row.middle-xs.content-form
             form(action="").row.col-xs-12
-              h4.col-xs-12 Envíanos tus datos para obtener una mejor
-                i  información
+              h4.col-xs-12 ¡INSCRÍBETE YA!
+                br
+                | Descubre tu ser creativo
+                i  Cupos limitados
               .col-xs-12
                 input.effect-input(type="text", placeholder="Nombre")
               .col-xs-12
@@ -27,7 +29,7 @@ block content
   .limiter-content
     .row.section(data-aos="fade-up", data-aos-offset="200")
       .row.col-xs-12.center-xs
-        h2.col-xs-12.title-section CONOCENOS
+        h2.col-xs-12.title-section CONÓCENOS
         p.col-xs-12.description-section Somos una empresa especializada en manufactura aditiva, educación en el uso de impresión 3D y proveemos materiales y equipamiento para tecnología FDM.
       //.col-xs-12.col-sm-6
         .blue-square.row
@@ -81,7 +83,11 @@ block content
       .row.center-xs
         .col-xs-12
           h2.title-section CURSO TALLER
-          h3.subtitle-section Introducción a la tecnología de impresión 3D por FFF (Fused Filament Fabrication).
+          h3.subtitle-section Introducción a la tecnología de impresión 3D por FFF
+            br
+            | (Fused Filament Fabrication).
+          br
+          h3.subtitle-section TEMARIO
           br
           br
       .row.start-xs.content-items-course
@@ -188,16 +194,28 @@ block content
             p $ 285.000 + iva
             br
             h3 Consignación
-            p CTA 123456789
+            p
+              strong C/A Bancolombia
+            p No 123456789
   .section.red-section
-    .row.center-xs.middle-xs
-      h2.col-xs-12.col-sm-6 ¡INSCRÍBETE YA!
+    .row.center-xs.middle-xs.between-xs
+      h2.col-xs-12 ¡INSCRÍBETE YA!
         br
         | Descubre tu ser creativo
         br
         b
           u CUPOS LIMITADOS
-      a(href="https://wa.me/+573105825336").more-info.col-xs-12.col-sm-6
+      .col-xs-12.form-red-section
+        form.row.between-xs
+          .col-xs-12.col-sm-3
+            input.effect-input(type="text", placeholder="Nombre")
+          .col-xs-12.col-sm-3
+            input.effect-input(type="email", placeholder="Correo")
+          .col-xs-12.col-sm-3
+            input.effect-input(type="phone", placeholder="Teléfono")
+          .row.center-xs.col-xs-12.col-sm-2
+            button(type="submit").btn.btn-black ENVIAR
+      a(href="https://wa.me/+573105825336").more-info.col-xs-12
         h5 ¿NECESITAS INFORMACIÓN?
         p +57 310 582 5336
   #map
@@ -214,5 +232,13 @@ block content
         .col-xs-12.text-copyright
           h4 UN FUTURO SIN LÍMITES
           a.text-footer(href="#", target="_blank", rel="noopener noreferrer") www.itmatters3d.com
+          .row.center-xs
+            .col-xs-1.row.around-xs
+              a(href="", target="_blank", rel="noopener noreferrer").col-xs-4
+                .icon
+                  i.fa.fa-facebook-square
+              a(href="", target="_blank", rel="noopener noreferrer").col-xs-4
+                .icon
+                  i.fa.fa-instagram
 
 
