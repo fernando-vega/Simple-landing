@@ -1,5 +1,5 @@
 <?php
-$emailTo = 'juanfe.vega@hotmail.com';  //Recipient's E-mail
+$emailTo = 'info@itmatters3d.com';  //Recipient's E-mail
 $subject = "Correo envíado desde la página web";
 $name =  $_REQUEST['name'];
 $email = $_REQUEST['email'];

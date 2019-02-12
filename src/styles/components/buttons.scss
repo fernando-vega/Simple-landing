@@ -16,6 +16,7 @@
     background: $color-black;
     transition: 0.3s;
     padding: 0 20px;
+    height: 41px;
     &:hover {
       background-color: rgba($color-black, 0.8);
       transform: scale(1.05);

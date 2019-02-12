@@ -13,25 +13,24 @@ block content
             img(src="./images/icons/icon-arrow-down.png", alt="")
         .col-xs-12.col-sm-4(data-aos="fade-left")
           .row.middle-xs.content-form
-            form(method="post", action='email.php')#formHeader.row.col-xs-12.contact-form
+            form(method="post", action='send.php')#formHeader.row.col-xs-12.contact-form
               h4.col-xs-12 ¡INSCRÍBETE YA!
                 br
                 | Descubre tu ser creativo
                 i  Cupos limitados
               .col-xs-12
                 input(type="text", name="name" id="name" placeholder="Nombre", pattern="[A-Za-z ]+")
-                label.has-error#name_error Ingresar solo letras
+                label.has-error#name_error Ingresar letras
               .col-xs-12
                 input(type="email", name="email" id="email" placeholder="Correo", pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$")
                 label.has-error#email_error El email es incorrecto
               .col-xs-12
                 input(type="phone", name="phone" id="phone" placeholder="Teléfono", pattern="[0-9]+$")
-                label.has-error#phone_error Ingresar solo números
+                label.has-error#phone_error Ingresar números
               .row.center-xs.col-xs-12.content-btn
                 #mail_success.success Tu mensaje se ha enviado satisfactoriamente
                 #mail_fail.error Lo sentimos, a ocurrido un error al enviar tu mensaje.
-                button(type="submit", value="ENVIAR")#send_message.btn.btn-blue
-            p#response
+                input(type="submit", value="ENVIAR")#send_message.btn.btn-blue
   .limiter-content
     .row.section(data-aos="fade-up", data-aos-offset="200")
       .row.col-xs-12.center-xs
@@ -202,7 +201,7 @@ block content
             h3 Consignación
             p
               strong Cuenta de ahorros Bancolombia
-            p No 123456789
+            p No 71038332214
   .section.red-section
     .row.center-xs.middle-xs.between-xs
       h2.col-xs-12 ¡INSCRÍBETE YA!
@@ -211,19 +210,22 @@ block content
         br
         b
           u CUPOS LIMITADOS
-      .col-xs-12.form-red-section.contact-form
-        form.row.between-xs
+      .col-xs-12.form-red-section
+        form(method="post", action='send.php')#formFooter.row.col-xs-12.between-xs.contact-form
           .col-xs-12.col-sm-3
-            input.effect-input(type="text", placeholder="Nombre", pattern="[A-Za-z ]+")
-            label.has-error Ingresar solo letras
+            input(type="text", name="name" id="name_footer" placeholder="Nombre", pattern="[A-Za-z ]+")
+            label.has-error#name_error_footer Ingresar letras
           .col-xs-12.col-sm-3
-            input(type="email", placeholder="Correo", pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$")
-            label.has-error El email es incorrecto
+            input(type="email", name="email" id="email_footer" placeholder="Correo", pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$")
+            label.has-error#email_error_footer El email es incorrecto
           .col-xs-12.col-sm-3
-            input(type="phone", placeholder="Teléfono", pattern="[0-9]+$")
-            label.has-error Ingresar solo números
+            input(type="phone", name="phone" id="phone_footer" placeholder="Teléfono", pattern="[0-9]+$")
+            label.has-error#phone_error_footer Ingresar números
           .row.center-xs.col-xs-12.col-sm-2
-            button(type="submit").btn.btn-black ENVIAR
+            input(type="submit", value="ENVIAR")#send_message_footer.btn.btn-black
+          .col-xs-12
+            #mail_success_footer.success Tu mensaje se ha enviado satisfactoriamente
+            #mail_fail_footer.error Lo sentimos, a ocurrido un error al enviar tu mensaje.
       a(href="https://wa.me/+573105825336").more-info.col-xs-12
         h5 ¿NECESITAS INFORMACIÓN?
         p +57 310 582 5336
