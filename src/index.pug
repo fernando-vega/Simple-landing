@@ -13,19 +13,25 @@ block content
             img(src="./images/icons/icon-arrow-down.png", alt="")
         .col-xs-12.col-sm-4(data-aos="fade-left")
           .row.middle-xs.content-form
-            form(action="").row.col-xs-12
+            form(method="post", action='email.php')#formHeader.row.col-xs-12.contact-form
               h4.col-xs-12 ¡INSCRÍBETE YA!
                 br
                 | Descubre tu ser creativo
                 i  Cupos limitados
               .col-xs-12
-                input.effect-input(type="text", placeholder="Nombre")
+                input(type="text", name="name" id="name" placeholder="Nombre", pattern="[A-Za-z ]+")
+                label.has-error#name_error Ingresar solo letras
               .col-xs-12
-                input.effect-input(type="email", placeholder="Correo")
+                input(type="email", name="email" id="email" placeholder="Correo", pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$")
+                label.has-error#email_error El email es incorrecto
               .col-xs-12
-                input.effect-input(type="phone", placeholder="Teléfono")
+                input(type="phone", name="phone" id="phone" placeholder="Teléfono", pattern="[0-9]+$")
+                label.has-error#phone_error Ingresar solo números
               .row.center-xs.col-xs-12.content-btn
-                button(type="submit").btn.btn-blue ENVIAR
+                #mail_success.success Tu mensaje se ha enviado satisfactoriamente
+                #mail_fail.error Lo sentimos, a ocurrido un error al enviar tu mensaje.
+                button(type="submit", value="ENVIAR")#send_message.btn.btn-blue
+            p#response
   .limiter-content
     .row.section(data-aos="fade-up", data-aos-offset="200")
       .row.col-xs-12.center-xs
@@ -205,14 +211,17 @@ block content
         br
         b
           u CUPOS LIMITADOS
-      .col-xs-12.form-red-section
+      .col-xs-12.form-red-section.contact-form
         form.row.between-xs
           .col-xs-12.col-sm-3
-            input.effect-input(type="text", placeholder="Nombre")
+            input.effect-input(type="text", placeholder="Nombre", pattern="[A-Za-z ]+")
+            label.has-error Ingresar solo letras
           .col-xs-12.col-sm-3
-            input.effect-input(type="email", placeholder="Correo")
+            input(type="email", placeholder="Correo", pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$")
+            label.has-error El email es incorrecto
           .col-xs-12.col-sm-3
-            input.effect-input(type="phone", placeholder="Teléfono")
+            input(type="phone", placeholder="Teléfono", pattern="[0-9]+$")
+            label.has-error Ingresar solo números
           .row.center-xs.col-xs-12.col-sm-2
             button(type="submit").btn.btn-black ENVIAR
       a(href="https://wa.me/+573105825336").more-info.col-xs-12

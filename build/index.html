@@ -34,21 +34,27 @@
             </div>
             <div class="col-xs-12 col-sm-4" data-aos="fade-left">
               <div class="row middle-xs content-form">
-                <form class="row col-xs-12" action="">
+                <form class="row col-xs-12 contact-form" method="post" action="email.php" id="formHeader">
                   <h4 class="col-xs-12">¡INSCRÍBETE YA!<br>Descubre tu ser creativo<i> Cupos limitados</i></h4>
                   <div class="col-xs-12">
-                    <input class="effect-input" type="text" placeholder="Nombre">
+                    <input type="text" name="name" id="name" placeholder="Nombre" pattern="[A-Za-z ]+">
+                    <label class="has-error" id="name_error">Ingresar solo letras</label>
                   </div>
                   <div class="col-xs-12">
-                    <input class="effect-input" type="email" placeholder="Correo">
+                    <input type="email" name="email" id="email" placeholder="Correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$">
+                    <label class="has-error" id="email_error">El email es incorrecto</label>
                   </div>
                   <div class="col-xs-12">
-                    <input class="effect-input" type="phone" placeholder="Teléfono">
+                    <input type="phone" name="phone" id="phone" placeholder="Teléfono" pattern="[0-9]+$">
+                    <label class="has-error" id="phone_error">Ingresar solo números</label>
                   </div>
                   <div class="row center-xs col-xs-12 content-btn">
-                    <button class="btn btn-blue" type="submit">ENVIAR</button>
+                    <div class="success" id="mail_success">Tu mensaje se ha enviado satisfactoriamente</div>
+                    <div class="error" id="mail_fail">Lo sentimos, a ocurrido un error al enviar tu mensaje.</div>
+                    <button class="btn btn-blue" type="submit" value="ENVIAR" id="send_message"></button>
                   </div>
                 </form>
+                <p id="response"></p>
               </div>
             </div>
           </div>
@@ -275,16 +281,19 @@
         <div class="row center-xs middle-xs between-xs">
           <h2 class="col-xs-12">¡INSCRÍBETE YA!<br>Descubre tu ser creativo<br><b>
               <u>CUPOS LIMITADOS</u></b></h2>
-          <div class="col-xs-12 form-red-section">
+          <div class="col-xs-12 form-red-section contact-form">
             <form class="row between-xs">
               <div class="col-xs-12 col-sm-3">
-                <input class="effect-input" type="text" placeholder="Nombre">
+                <input class="effect-input" type="text" placeholder="Nombre" pattern="[A-Za-z ]+">
+                <label class="has-error">Ingresar solo letras</label>
               </div>
               <div class="col-xs-12 col-sm-3">
-                <input class="effect-input" type="email" placeholder="Correo">
+                <input type="email" placeholder="Correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$">
+                <label class="has-error">El email es incorrecto</label>
               </div>
               <div class="col-xs-12 col-sm-3">
-                <input class="effect-input" type="phone" placeholder="Teléfono">
+                <input type="phone" placeholder="Teléfono" pattern="[0-9]+$">
+                <label class="has-error">Ingresar solo números</label>
               </div>
               <div class="row center-xs col-xs-12 col-sm-2">
                 <button class="btn btn-black" type="submit">ENVIAR</button>
@@ -319,7 +328,7 @@
       </footer>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

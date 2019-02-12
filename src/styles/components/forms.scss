@@ -61,3 +61,35 @@
     }
   }
 }
+
+
+/*
+* Validations
+*/
+
+.contact-form{
+  .has-error{
+    display: none;
+    color: $color-white;
+    font-size: 0.8em;
+  }
+  input:invalid {
+    border: 3px #E41F26 solid;
+  }
+  input:invalid ~ label{
+    display: block;
+  }
+  &.form-red-section{
+    input:invalid {
+      border: 3px $color-black-titles solid;
+    }
+  }
+  .success{
+    color: $color-blue;
+    display: none;
+  }
+  .error{
+    color: $color-red;
+    display: none;
+  }
+}
